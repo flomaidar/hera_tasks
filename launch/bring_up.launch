@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- main info -->
+  <arg name="task"             default="Demo"/>
+  <arg name="enable_bot"       default="false"/>
+
+  <!-- ###################################################################### -->
+  <!-- ###################################################################### -->
+  <!-- ###################################################################### -->
+
+  <!-- start task -->
+  <node name="$(arg task)" pkg="tasks" type="$(arg task).py"
+    launch-prefix="xterm -maximized -title $(arg task) -hold -e" />
+
+  <!-- bot -->
+  <group if="$(arg enable_bot)">
+    <node name="bot" pkg="tasks" type="bot.py"
+      launch-prefix="xterm -maximized -title bot -hold -e" />
+  </group>
+
+</launch>
