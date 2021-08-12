@@ -39,6 +39,7 @@ class Task():
         self.srv.choices.append(Opcs(id="robotnames", values=robotnames))
         self.srv.choices.append(Opcs(id="locals", values=locals))
 
+
         ########################################################################
         ########################################################################
 
