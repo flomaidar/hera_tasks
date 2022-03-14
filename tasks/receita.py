@@ -43,19 +43,10 @@ class Task():
         ########################################################################
         ########################################################################
 
-        while (True):
-            # actions.manip("close")
-            # actions.manip("close")
-            actions.talk('Bom dia')
-            # actions.manip("home")
-            break
-            
-            
-
-
-
+        actions.talk('ummmmmmmmmmmmmmmmmmmmmmm')
         
-        
+       
+            
 
 if __name__ == '__main__':
     try:

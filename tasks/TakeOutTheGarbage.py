@@ -39,23 +39,16 @@ class Task():
         self.srv.choices.append(Opcs(id="robotnames", values=robotnames))
         self.srv.choices.append(Opcs(id="locals", values=locals))
 
-
         ########################################################################
         ########################################################################
 
-        actions.talk('Hello! My name is HERA.')
-        actions.talk('Please, talk to me')
-        actions.pose('door')
+        
+        # actions.talk('Please, talk to me')
+        # actions.pose('door')
 
         while (True):
-            try:
-                speech = actions.hear(self.srv)
-
-                if (speech.result == '<robotnames>'):
-                    person = actions.face()
-                    actions.talk('Hello ' + person.result)
-                elif (speech.result == 'Start task'):
-                    actions.talk('Starting Take Out the Garbage task')
+            actions.talk('Bom dia')
+            
                     ######
                     # talk = False
                     # while not json.loads(actions.question('is_front_free').result):
@@ -66,32 +59,32 @@ class Task():
                     # actions.talk('The door is open!')
                     # actions.move('foward', seconds=5.0)
 
-                    cont = 0
-                    while cont < 2:
-                        actions.talk('I will now go the bin location')
-                        actions.goto('bin'+str(cont))
-                        actions.talk("I'm going to take the bag")
-                        actions.manip("open")
-                        actions.manip("", x=0.35, y=0.0, z=0.0, rx=0.0, ry=1.5, rz=0.0)
-                        time.sleep(0.5)
-                        actions.manip("close")
-                        actions.manip("home")
-
-                        actions.talk('Going to collection')
-                        actions.goto('collection')
-                        actions.talk("I will now drop the bags in the collection zone")
-                        actions.manip("", x=0.35, y=0.0, z= 0.0, rx=0.0, ry=1.5, rz=0.0)
-                        actions.manip("open")
-                        actions.manip("reset")
-                        time.sleep(2)
-
-                        cont += 1
-
-                    actions.talk('I have finished the take out the garbage task')
-                    actions.goto('end')
-
-            except Exception as e:
-                traceback.print_exc()
+            # cont = 1
+            # while cont <= 20:
+                # actions.talk('I will now go the bin location')
+            # actions.goto('bin0')
+                # actions.talk("Please give me the bag")
+                # actions.manip("open")
+                # actions.manip("", x=0.3, y=0.0, z=0.2, rx=0.0, ry=0.8, rz=0.0)
+                # time.sleep(6)
+                # actions.manip("close")
+                # actions.manip("home")
+# 
+                # actions.talk('Going to collection zone')
+                # actions.goto('collection')
+                # actions.talk("I will now drop the bags in the collection zone")
+                # actions.manip("", x=0.28, y=0.0, z=-0.01, rx=0.0, ry=1.0, rz=0.0)
+                # time.sleep(4.9)
+                # actions.manip("open")
+                # actions.manip("reset")
+                # time.sleep(4)
+# 
+                # cont += 1
+            # 
+            # actions.goto('end')
+            # return None
+# 
+        
 
 if __name__ == '__main__':
     try:

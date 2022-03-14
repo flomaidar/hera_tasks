@@ -44,10 +44,7 @@ class Task():
         ########################################################################
 
         while (True):
-            # actions.manip("close")
-            # actions.manip("close")
-            actions.talk('Bom dia')
-            # actions.manip("home")
+            actions.talk('O Bom Dia Sao Paulo volta ja')
             break
             
             

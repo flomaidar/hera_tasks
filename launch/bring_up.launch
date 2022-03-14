@@ -3,15 +3,14 @@
 
   <!-- main info -->
   <arg name="task"             default="Demo"/>
-  <!-- <arg name="enable_bot"       default="false"/> -->
+  <!-- <arg name="enable_bot"       default="true"/> -->
 
   <!-- ###################################################################### -->
   <!-- ###################################################################### -->
   <!-- ###################################################################### -->
 
   <!-- start task -->
-  <node name="$(arg task)" pkg="tasks" type="$(arg task).py"
-    launch-prefix="xterm -maximized -title $(arg task) -hold -e" />
+  <node name="$(arg task)" pkg="tasks" type="$(arg task).py"/>
 
   <!-- bot -->
   <!-- <group if="$(arg enable_bot)">

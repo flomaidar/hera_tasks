@@ -43,19 +43,9 @@ class Task():
         ########################################################################
         ########################################################################
 
-        while (True):
-            # actions.manip("close")
-            # actions.manip("close")
-            actions.talk('Bom dia')
-            # actions.manip("home")
-            break
+        actions.talk('Agora coloque no forno durante 40 minutos')
             
             
-
-
-
-        
-        
 
 if __name__ == '__main__':
     try:
